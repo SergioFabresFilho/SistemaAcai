@@ -51,3 +51,11 @@ class OrderSerializer(serializers.ModelSerializer):
         fields = ('id', 'fruit', 'size', 'additionals',
                   'total_prepare_time', 'total_price')
         read_only = ('id',)
+
+
+class OrderDetailSerializer(OrderSerializer):
+    """ Serialize an order detail """
+
+    fruit = FruitSerializer(read_only=True)
+    size = SizeSerializer(read_only=True)
+    additionals = AdditionalSerializer(read_only=True, many=True)
