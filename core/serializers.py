@@ -5,7 +5,7 @@ from core.models import Fruit, Size, Additional, Order
 
 class OrderOptionsMeta:
     model = None
-    fields = ('id', 'price', 'prepare_time')
+    fields = ('id', 'price', 'prepare_time', 'name')
     read_only = ('id',)
 
 

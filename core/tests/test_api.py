@@ -140,4 +140,5 @@ class AcaiApiTests(TestCase):
         response = self.client.get(order_detail_url(self.order.id))
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data, serializer.data)
-        self.assertEquals(response.data['fruit'], self.kiwi)
+        self.assertEquals(response.data['fruit']['name'], self.kiwi.name)
+        self.assertEquals(response.data['size']['name'], self.medium.name)
