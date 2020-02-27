@@ -1,0 +1,74 @@
+[
+  {
+    "model": "core.fruit",
+    "fields": {
+      "name": "Morango",
+      "price": 0,
+      "prepare_time": 0
+    }
+  },
+  {
+    "model": "core.fruit",
+    "fields": {
+      "name": "Banana",
+      "price": 0,
+      "prepare_time": 0
+    }
+  },
+  {
+    "model": "core.fruit",
+    "fields": {
+      "name": "Kiwi",
+      "price": 0,
+      "prepare_time": 5
+    }
+  },
+  {
+    "model": "core.size",
+    "fields": {
+      "name": "Pequeno",
+      "price": 10,
+      "prepare_time": 5
+    }
+  },
+  {
+    "model": "core.size",
+    "fields": {
+      "name": "Médio",
+      "price": 13,
+      "prepare_time": 7
+    }
+  },
+  {
+    "model": "core.size",
+    "fields": {
+      "name": "Grande",
+      "price": 15,
+      "prepare_time": 10
+    }
+  },
+  {
+    "model": "core.additional",
+    "fields": {
+      "name": "Leite ninho",
+      "price": 3,
+      "prepare_time": 0
+    }
+  },
+  {
+    "model": "core.additional",
+    "fields": {
+      "name": "Granola",
+      "price": 0,
+      "prepare_time": 0
+    }
+  },
+  {
+    "model": "core.additional",
+    "fields": {
+      "name": "Paçoca",
+      "price": 3,
+      "prepare_time": 3
+    }
+  }
+]
