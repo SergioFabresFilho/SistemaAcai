@@ -40,6 +40,13 @@ class OrderViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.OrderSerializer
     queryset = Order.objects.all()
 
+    def get_serializer_class(self):
+        """ Return appropriate serializer class """
+        if self.action == 'retrieve':
+            return serializers.OrderDetailSerializer
+
+        return serializers.OrderSerializer
+
     def perform_create(self, serializer):
         """ Create a new order """
 
