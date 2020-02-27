@@ -4,7 +4,7 @@ from rest_framework import status
 from rest_framework.test import APIClient
 
 from core.models import Fruit, Size, Additional, Order
-from core.serializers import OrderSerializer
+from core.serializers import OrderSerializer, OrderDetailSerializer
 
 FRUITS_URL = reverse('core:fruit-list')
 SIZES_URL = reverse('core:size-list')
@@ -136,7 +136,8 @@ class AcaiApiTests(TestCase):
     def test_view_order_detail(self):
         """ Test viewing an order detail """
 
-        serializer = OrderSerializer(self.order)
+        serializer = OrderDetailSerializer(self.order)
         response = self.client.get(order_detail_url(self.order.id))
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data, serializer.data)
+        self.assertEquals(response.data['fruit'], self.kiwi)
